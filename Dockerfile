@@ -78,10 +78,10 @@ COPY --from=webpack /app/public/packs ./public/packs
 #RUN bundle exec rake assets:precompile
 # RUN bundle exec rails assets:precompile
 # RUN bundle exec rails assets:clean
-RUN gem install bundler && bundle install
+
 RUN ln -s /fonts /app/public/fonts
 RUN bundle exec bootsnap precompile --gemfile app/ lib/
-RUN bundle exec rails assets:precompile
+
 WORKDIR /data/docuseal
 ENV WORKDIR=/data/docuseal
 
