@@ -73,7 +73,7 @@ COPY --from=fonts /fonts/GoNotoKurrent-Regular.ttf /fonts/GoNotoKurrent-Bold.ttf
 COPY --from=fonts /fonts/FreeSans.ttf /usr/share/fonts/freefont
 COPY --from=webpack /app/public/packs ./public/packs
 
-RUN echo "rails assets:precompile"> bundle exec rails assets:precompile
+#RUN echo "rails assets:precompile"> bundle exec rails assets:precompile
 #RUN bundle exec rake assets:clean
 #RUN bundle exec rake assets:precompile
 
