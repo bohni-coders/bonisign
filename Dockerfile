@@ -31,7 +31,7 @@ COPY ./app/javascript ./app/javascript
 COPY ./app/views ./app/views
 
 RUN echo "gem 'shakapacker'" > Gemfile && ./bin/shakapacker
-
+RUN echo "rails assets:precompile"> bundle rails assets:precompile
 FROM ruby:3.3.4-alpine as app
 
 ENV RAILS_ENV=production
