@@ -73,8 +73,9 @@ COPY --from=fonts /fonts/GoNotoKurrent-Regular.ttf /fonts/GoNotoKurrent-Bold.ttf
 COPY --from=fonts /fonts/FreeSans.ttf /usr/share/fonts/freefont
 COPY --from=webpack /app/public/packs ./public/packs
 
-RUN bundle exec rake assets:clobber
-RUN bundle exec rake assets:precompile
+RUN echo "rails assets:precompile"> bundle rails assets:precompile
+# RUN bundle exec rake assets:clobber
+# RUN bundle exec rake assets:precompile
 
 RUN ln -s /fonts /app/public/fonts
 RUN bundle exec bootsnap precompile --gemfile app/ lib/
