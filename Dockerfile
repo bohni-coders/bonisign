@@ -58,7 +58,7 @@ activate = 1' >> /app/openssl_legacy.cnf
 COPY ./Gemfile ./Gemfile.lock ./
 
 RUN apk add --no-cache build-base && bundle install && apk del build-base && rm -rf ~/.bundle /usr/local/bundle/cache && ruby -e "puts Dir['/usr/local/bundle/**/{spec,rdoc,resources/shared,resources/collation,resources/locales}']" | xargs rm -rf
-
+RUN node --version && npm --version && yarn --version
 COPY ./bin ./bin
 COPY ./app ./app
 COPY ./config ./config
@@ -78,10 +78,10 @@ COPY --from=webpack /app/public/packs ./public/packs
 #RUN bundle exec rake assets:precompile
 # RUN bundle exec rails assets:precompile
 # RUN bundle exec rails assets:clean
-RUN gem install bundler && bundle install
 RUN ln -s /fonts /app/public/fonts
 RUN bundle exec bootsnap precompile --gemfile app/ lib/
 RUN bundle exec rails assets:precompile
+RUN bundle exec rails assets:clean
 
 WORKDIR /data/docuseal
 ENV WORKDIR=/data/docuseal
