@@ -10,7 +10,7 @@ FROM ruby:3.3.4-alpine as webpack
 
 ENV RAILS_ENV=production
 ENV NODE_ENV=production
-
+FROM node:20-alpine as webpack
 WORKDIR /app
 
 RUN apk add --no-cache nodejs yarn git build-base && \
