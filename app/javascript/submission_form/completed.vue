@@ -91,10 +91,10 @@
     >
       {{ t('powered_by') }}
       <a
-        href="https://www.docuseal.co/start"
+        href="https://boni.one"
         target="_blank"
         class="underline"
-      >DocuSeal</a> - {{ t('open_source_documents_software') }}
+      >Boni</a> - {{ t('open_source_documents_software') }}
     </div>
   </div>
 </template>
