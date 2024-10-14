@@ -3,11 +3,13 @@ services:
     depends_on:
       postgres:
         condition: service_healthy
-    image: bonitech/bonisign:v1
+    build:
+      context: .
+      dockerfile: Dockerfile
     ports:
       - 3000:3000
     volumes:
-      - ./bonisign:/data/docseal
+      - ./bonisign:/data/docuseal
     environment:
       - FORCE_SSL=${HOST}
       - DATABASE_URL=postgresql://postgres:postgres@postgres:5432/docuseal
