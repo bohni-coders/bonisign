@@ -14,7 +14,7 @@ module.exports = {
           'base-100': '#faf7f5',
           'base-200': '#efeae6',
           'base-300': '#e7e2df',
-          'base-content': '#390099',
+          'base-content': '#291334',
           '--rounded-btn': '1.9rem',
           '--tab-border': '2px',
           '--tab-radius': '.5rem'
