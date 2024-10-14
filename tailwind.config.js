@@ -10,11 +10,11 @@ module.exports = {
           primary: '#e4e0e1',
           secondary: '#ef9fbc',
           accent: '#eeaf3a',
-          neutral: '#291334',
+          neutral: '#390099',
           'base-100': '#faf7f5',
           'base-200': '#efeae6',
           'base-300': '#e7e2df',
-          'base-content': '#291334',
+          'base-content': '#390099',
           '--rounded-btn': '1.9rem',
           '--tab-border': '2px',
           '--tab-radius': '.5rem'
