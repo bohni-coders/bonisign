@@ -78,7 +78,6 @@ COPY --from=webpack /app/public/packs ./public/packs
 #RUN bundle exec rake assets:precompile
 # RUN bundle exec rails assets:precompile
 # RUN bundle exec rails assets:clean
-
 RUN ln -s /fonts /app/public/fonts
 RUN bundle exec bootsnap precompile --gemfile app/ lib/
 
