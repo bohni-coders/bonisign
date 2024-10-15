@@ -15,7 +15,7 @@ default: &default
 
 development:
   <<: *default
-  compile: true
+  compile: false
   compiler_strategy: mtime
 
   dev_server:
@@ -38,7 +38,7 @@ development:
 
 test:
   <<: *default
-  compile: true
+  compile: false
   public_output_path: packs-test
 
 production:
