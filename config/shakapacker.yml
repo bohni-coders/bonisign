@@ -43,5 +43,5 @@ test:
 
 production:
   <<: *default
-  compile: true
+  compile: false
   cache_manifest: true
