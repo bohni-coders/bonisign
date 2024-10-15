@@ -94,7 +94,7 @@
         href="https://boni.one"
         target="_blank"
         class="underline"
-      >Boni</a> - {{ t('open_source_documents_software') }}
+      >Boni One</a> - {{ t('open_source_documents_software') }}
     </div>
   </div>
 </template>
