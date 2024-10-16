@@ -39,7 +39,7 @@ module Submissions
 
         io = StringIO.new
 
-        document.trailer.info[:Creator] = "#{Docuseal.product_name} (#{Docuseal::PRODUCT_URL})"
+        document.trailer.info[:Creator] = "BoniSign"
 
         last_submitter = submission.submitters.select(&:completed_at).max_by(&:completed_at)
 
@@ -393,7 +393,7 @@ module Submissions
     end
 
     def sign_reason
-      'Signed with DocuSeal.co'
+      'Signed with BoniSign'
     end
 
     def maybe_add_background(_canvas, _submission, _page_size); end
@@ -401,8 +401,8 @@ module Submissions
     def add_logo(column, _submission = nil)
       column.image(PdfIcons.logo_io, width: 40, height: 40, position: :float)
 
-      column.formatted_text([{ text: 'DocuSeal',
-                               link: Docuseal::PRODUCT_URL }],
+      column.formatted_text([{ text: 'BoniSign',
+                               link: BoniSign::https://sign.boni.one }],
                             font_size: 20,
                             font: [FONT_NAME, { variant: :bold }],
                             width: 100,
