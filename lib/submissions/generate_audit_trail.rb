@@ -402,7 +402,7 @@ module Submissions
       column.image(PdfIcons.logo_io, width: 40, height: 40, position: :float)
 
       column.formatted_text([{ text: 'BoniSign',
-                               link: BoniSign::https://sign.boni.one }],
+                               link: https://sign.boni.one }],
                             font_size: 20,
                             font: [FONT_NAME, { variant: :bold }],
                             width: 100,
