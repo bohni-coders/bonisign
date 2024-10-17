@@ -91,10 +91,10 @@
     >
       {{ t('powered_by') }}
       <a
-        href="https://boni.one"
+        href="https://sign.boni.one"
         target="_blank"
         class="underline"
-      >Boni One</a> - {{ t('open_source_documents_software') }}
+      >BoniSign</a>
     </div>
   </div>
 </template>
